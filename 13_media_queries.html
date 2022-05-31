@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Queries</title>
     <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: gray;
+        color: white; /*color of text*/
+        text-align: center;
+        padding-top: 100px; /*pushes text down from the top 100px*/
+      }
+      h1 {
+        display: none; /*Makes all h1's disappear*/
+      }
+
+      /* SMARTPHONES */
+      @media (max-width: 500px) {
         body {
-         font-family: Arial, Helvetica, sans-serif;
-         background:gray;
-         color:white;/*color of text*/ 
-         text-align:center;
-         padding-top:100px;/*pushes text down from the top 100px*/
-        }
-        h1{
-            display:none;/*Makes all h1's disappear*/
-        }
+          background: red; /*Once the width hits 500px the background turns red*/
+        } /*min-width does the opposite the background will be red until 500px then it turns grey*/
 
-        /* SMARTPHONES */
-        @media(max-width:500px) {
-            body{
-                background:red;     /*Once the width hits 500px the background turns red*/
-            }                         /*min-width does the opposite the background will be red until 500px then it turns grey*/
-        
-            #smartphone h1{
-                display:block;/*only displays the word"smartphone" when it is 500px or less*/
-            }
+        #smartphone h1 {
+          display: block; /*only displays the word"smartphone" when it is 500px or less*/
+        }
+      }
+
+      /* TABLET */
+      @media (min-width: 501px) and (max-width: 768px) {
+        /*common breakpoint for tablets is 768px*/
+        /* When the min-width is at 501px the screen turns blue */
+        body {
+          background: blue;
         }
 
-        /* TABLET */
-        @media(min-width:501px) and (max-width:768px) {   /*common breakpoint for tablets is 768px*/
-            /* When the min-width is at 501px the screen turns blue */
-            body{
-                background:blue;
-            }
+        #tablet h1 {
+          display: block;
+        }
+      }
 
-            #tablet h1{
-                display:block;
-            }
+      /* Normal */
+      @media (min-width: 769px) and (max-width: 1200px) {
+        /*From 769px to 1200px the screen will be green becuae that is when the width for "normal" starts*/
+        body {
+          background: green;
         }
 
-        /* Normal */
-        @media(min-width:769px) and (max-width:1200px) {    /*From 769px to 1200px the screen will be green becuae that is when the width for "normal" starts*/
-            body{
-                background:green;
-            }
+        #normal h1 {
+          display: block;
+        }
+      }
 
-            #normal h1{
-                display:block;
-            }
+      /*Widescreen*/
+      @media (min-width: 1201px) {
+        body {
+          background: black;
         }
 
-        /*Widescreen*/
-        @media(min-width:1201px) {
-            body{
-                background:black;
-            }
+        #widescreen h1 {
+          display: block;
+        }
+      }
 
-            #widescreen h1{
-                display:block;
-            }
+      /*Landscape*/
+      @media (max-height: 500px) {
+        body {
+          background: orange;
         }
 
-              /*Landscape*/
-              @media(max-height:500px) {
-            body{
-                background:orange;
-            }
-
-            #landscape h1{
-                display:block;
-            }
+        #landscape h1 {
+          display: block;
         }
+      }
     </style>
-</head>
-<!-- <link rel="stylesheet" media="screen and (max-width:768px;)" href="mobile.css">IT WILL ONLY LOAD THIS STYLESHEET IF THE SCREEN IS 768PX OR LESS "BASICALLY A TABLET OR LESS"  -->
-<body>
+  </head>
+  <!-- <link rel="stylesheet" media="screen and (max-width:768px;)" href="mobile.css">IT WILL ONLY LOAD THIS STYLESHEET IF THE SCREEN IS 768PX OR LESS "BASICALLY A TABLET OR LESS"  -->
+  <body>
     <div id="widescreen"><h1>Widescreen</h1></div>
-    <div id="normal"><h1>Normal</h1></div><!--Computer Size that is what"Normal" Means-->
+    <div id="normal"><h1>Normal</h1></div>
+    <!--Computer Size that is what"Normal" Means-->
     <div id="tablet"><h1>Tablet</h1></div>
     <div id="smartphone"><h1>Smartphone</h1></div>
     <div id="landscape"><h1>Landscape</h1></div>
-</body>
+  </body>
 </html>
