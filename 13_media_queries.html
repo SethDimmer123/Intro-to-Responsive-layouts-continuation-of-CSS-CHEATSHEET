@@ -13,12 +13,53 @@
          text-align:center;
          padding-top:100px;/*pushes text down from the top 100px*/
         }
+        h1{
+            display:none;/*Makes all h1's disappear*/
+        }
 
-        /* Smartphones */
+        /* SMARTPHONES */
         @media(max-width:500px) {
             body{
                 background:red;     /*Once the width hits 500px the background turns red*/
             }                         /*min-width does the opposite the background will be red until 500px then it turns grey*/
+        
+            #smartphone h1{
+                display:block;/*only displays the word"smartphone" when it is 500px or less*/
+            }
+        }
+
+        /* TABLET */
+        @media(min-width:501px) and (max-width:768px) {   /*common breakpoint for tablets is 768px*/
+            /* When the min-width is at 501px the screen turns blue */
+            body{
+                background:blue;
+            }
+
+            #tablet h1{
+                display:block;
+            }
+        }
+
+        /* Normal */
+        @media(min-width:769px) and (max-width:1200px) {    /*From 769px to 1200px the screen will be green becuae that is when the width for "normal" starts*/
+            body{
+                background:green;
+            }
+
+            #normal h1{
+                display:block;
+            }
+        }
+
+        /*Widescreen*/
+        @media(min-width:1201px) {
+            body{
+                background:black;
+            }
+
+            #widescreen h1{
+                display:block;
+            }
         }
     </style>
 </head>
