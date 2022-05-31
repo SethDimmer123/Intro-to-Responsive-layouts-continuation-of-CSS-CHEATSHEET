@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Em & Rem Units</title>
     <style>
+        /* #box-1{ 
+            font-size:20px;/*parent element
+        }
+                            /*20px times 1.5 Equals 30px*/
+        /*#box-1 p{
+            font-size:1.5em;This equals 30px
+            padding:1em;Since i added a font-size to the actual element itself "The paragraph it is going to go on that"
+        }
 
+        /*#box-1 ul{
+          font-size:1.2em;  JUST USE rem because they will be based off the root element
+          } */
     </style>
 </head>
 <body>
@@ -14,6 +25,18 @@
         <h3>Box One</h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt facilis ea voluptates quidem unde saepe molestias dolor consequuntur quis quos.</p>
     </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <li>4</li>
+    </ul>
+    <!--Commenting out box-1 because its irrelevent just good to understand there is more than one way to do things -->
     <div id="box-2">
         <h3>Box two</h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt facilis ea voluptates quidem unde saepe molestias dolor consequuntur quis quos.</p>
